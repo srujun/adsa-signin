@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ADSA - Sign In App</title>
+
+    <!-- Bootstrap latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Bootstrap optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+
+    <div class="jumbotron">
+        <h1>ADSA Sign In App Admin Panel</h1>
+        <p>View current or past events and add new events through this panel.</p>
+    </div>
+
+    <div class="page-header">
+        <h1>Add New Event</h1>
+    </div>
+    <p>Schedule a new ADSA event by entering information here.</p>
+
+    <form class="form-event">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="inputEventName">Event Name</label>
+                <input type="text" id="inputEventName" class="form-control" placeholder="ADSA SQL Workshop" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventSTime">Start Time</label>
+                <input type="time" id="inputEventSTime" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventETime">End Time</label>
+                <input type="time" id="inputEventETime" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventDate">Date</label>
+                <input type="date" id="inputEventDate" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventKey">Event Key</label>
+                <input type="text" id="inputEventKey" class="form-control" placeholder="adsawkshp" required>
+            </div>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add New Event</button>
+    </form>
+
+    <div class="page-header">
+        <h1>Scheduled Events</h1>
+    </div>
+
+    <div id="event-table" class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Attendees</th>
+                <th>Event Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>ADSA SQL Workshop</td>
+                <td>01/06/2016</td>
+                <td>1:00 PM</td>
+                <td>3:30 PM</td>
+                <td>97</td>
+                <td>
+                    <h4><span class="label label-success">Completed</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ADSA Hadoop Case Study</td>
+                <td>01/22/2016</td>
+                <td>2:00 PM</td>
+                <td>3:30 PM</td>
+                <td></td>
+                <td>
+                    <h4><span class="label label-warning">Scheduled</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>ADSA Datathon</td>
+                <td>01/09/2016</td>
+                <td>1:00 PM</td>
+                <td>3:30 PM</td>
+                <td>21</td>
+                <td>
+                    <h4><span class="label label-info">Ongoing</span></h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+    </div><!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
