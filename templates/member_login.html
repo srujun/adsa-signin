@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="jumbotron" id="login">
+        <h1>Sign in to the $TEMP EVENT$</h1>
+    </div>
+
+    <form class="form-signin" action="{{ url_for('member_login') }}" method="post">
+        <label for="inputNetID">NetID</label>
+        <input type="text" name="inputNetID" id="inputNetID" class="form-control" placeholder="NetID" required autofocus>
+        <label for="inputKey">Event Key {% if error %} <span id="invalid">{{ error }}</span>{% endif %}</label>
+        <input type="text" name="inputKey" id="inputKey" class="form-control" placeholder="Event Key" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+{% endblock %}

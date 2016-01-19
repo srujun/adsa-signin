@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="jumbotron">
+        <h1>ADSA Sign In App Admin Panel</h1>
+        <p>View current or past events and add new events through this panel.</p>
+    </div>
+
+    <div class="page-header">
+        <h1>Add New Event</h1>
+    </div>
+    <p>Schedule a new ADSA event by entering information here.</p>
+
+    <form class="form-event" action="{{ url_for('admin_newevent') }}" method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="inputEventName">Event Name</label>
+                <input type="text" name="inputEventName" id="inputEventName" class="form-control" placeholder="ADSA SQL Workshop" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventSTime">Start Time</label>
+                <input type="time" name="inputEventSTime" id="inputEventSTime" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventETime">End Time</label>
+                <input type="time" name="inputEventETime" id="inputEventETime" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventDate">Date</label>
+                <input type="date" name="inputEventDate" id="inputEventDate" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputEventKey">Event Key</label>
+                <input type="text" name="inputEventKey" id="inputEventKey" class="form-control" placeholder="adsawkshp" required>
+            </div>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Add New Event</button>
+    </form>
+
+    <div class="page-header">
+        <h1>Scheduled Events</h1>
+    </div>
+
+    <div id="event-table" class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Event Key</th>
+                <th>Attendees</th>
+                <th>Event Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>ADSA SQL Workshop</td>
+                <td>01/06/2016</td>
+                <td>1:00 PM</td>
+                <td>3:30 PM</td>
+                <td>yolo</td>
+                <td>97</td>
+                <td>
+                    <h4><span class="label label-success">Completed</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ADSA Hadoop Case Study</td>
+                <td>01/22/2016</td>
+                <td>2:00 PM</td>
+                <td>3:30 PM</td>
+                <td>swag</td>
+                <td></td>
+                <td>
+                    <h4><span class="label label-warning">Scheduled</span></h4>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>ADSA Datathon</td>
+                <td>01/09/2016</td>
+                <td>1:00 PM</td>
+                <td>3:30 PM</td>
+                <td>sup</td>
+                <td>21</td>
+                <td>
+                    <h4><span class="label label-info">Ongoing</span></h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+{% endblock %}
